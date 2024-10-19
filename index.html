@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Course Selection and Teacher Assignment System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0044cc;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    border-bottom: 2px solid #0044cc;
+    padding-bottom: 10px;
+}
+
+.course-select, .teacher-profile {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+
+select, input, textarea {
+    padding: 10px;
+    width: 300px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003399;
+}
+
+footer {
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>University Course Selection System</h1>
+<nav>
+    <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#teachers">Teacher Profiles</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+    </ul>
+</nav>
+</header>
+
+<section id="dashboard">
+<h2>Welcome, [Student Name]</h2>
+<p>Select your courses and teachers for the semester.</p>
+</section>
+
+<section id="courses">
+<h2>Course Selection</h2>
+<form id="course-selection-form">
+    <h3>Select 4 Theory Courses:</h3>
+    <div class="course-select">
+        <label for="course1">Course 1:</label>
+        <select id="course1">
+            <option value="">Select a course</option>
+            <option value="course1">Data Structures & Algorithms</option>
+            <option value="course2">Operating Systems</option>
+            <option value="course3">Computer Network</option>
+            <option value="course4">Database Management science</option>
+        </select>
+
+        <label for="teacher1">Select Teacher:</label>
+        <select id="teacher1">
+            <option value="">Select a teacher</option>
+            <option value="teacher1">Dr. John Smith</option>
+            <option value="teacher2">Dr. Jane Doe</option>
+        </select>
+    </div>
+
+    <!-- Repeat similar blocks for the remaining theory and lab courses -->
+
+    <h3>Select 2 Lab Courses:</h3>
+    <div class="course-select">
+        <label for="lab1">Lab Course 1:</label>
+        <select id="lab1">
+            <option value="">Select a lab course</option>
+            <option value="lab1">Lab Course 1</option>
+            <option value="lab2">Lab Course 2</option>
+        </select>
+
+        <label for="teacherLab1">Select Teacher:</label>
+        <select id="teacherLab1">
+            <option value="">Select a teacher</option>
+            <option value="teacherLab1">Dr. Alice Green</option>
+            <option value="teacherLab2">Dr. Bob White</option>
+        </select>
+    </div>
+
+    <button type="submit">Submit Courses</button>
+</form>
+</section>
+
+<section id="teachers">
+<h2>Teacher Profiles</h2>
+<div class="teacher-profile">
+    <h3>Dr. John Smith</h3>
+    <p>Rating: 4.8/5</p>
+    <p>Research Projects: AI in Education, Data Mining</p>
+    <p>Patents: 2</p>
+    <p>Academic Background: PhD in Computer Science</p>
+</div>
+<div class="teacher-profile">
+    <h3>Dr. John Smith</h3>
+    <p>Rating: 4.5/5</p>
+    <p>Research Projects: ML in Education, Data Engineering</p>
+    <p>Patents: 1</p>
+    <p>Academic Background: PhD in Computer Science</p>
+</div>
+<!-- More teacher profiles can be listed here -->
+</section>
+
+<section id="feedback">
+<h2>Submit Feedback</h2>
+<form id="feedback-form">
+    <label for="teacher-feedback">Teacher:</label>
+    <select id="teacher-feedback">
+        <option value="">Select a teacher</option>
+        <option value="teacher1">Dr. John Smith</option>
+        <option value="teacher2">Dr. Jane Doe</option>
+    </select>
+
+    <label for="rating">Rating:</label>
+    <input type="number" id="rating" name="rating" min="1" max="5">
+
+    <label for="feedback-text">Feedback:</label>
+    <textarea id="feedback-text" name="feedback-text" rows="4" cols="50"></textarea>
+
+    <button type="submit">Submit Feedback</button>
+</form>
+</section>
+
+<footer>
+<p>&copy; 2024 University Course Selection System</p>
+</footer>
+</body>
+</html>
+
